@@ -1,0 +1,10 @@
+.table th {
+    color: #36648B;
+	font-family: Arial;
+	font-size: 0.9em;
+}
+
+.table td {
+	font-size: 0.9em;
+	color: #4F4F4F;
+}

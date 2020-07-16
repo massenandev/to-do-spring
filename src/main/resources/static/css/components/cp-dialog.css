@@ -1,0 +1,45 @@
+/* for modal */
+.cp-dialog {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top:200px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4);
+}
+
+.cp-dialog-title {
+	background: #607B8B;
+	padding: 8px 5px 10px 15px;
+	color: #fefefe;
+}
+
+.cp-dialog-content {
+  background-color: #fefefe;
+  margin: auto;
+  border: 1px solid #888;
+}
+
+.cp-dialog-body {
+  margin: auto;
+  padding: 15px 15px 30px 15px;
+}
+
+.cp-dialog-close {
+	color: #aaaaaa;
+	font-weight: bold;
+	float: right;
+	padding-right: 10px;
+}
+
+.cp-dialog-close:hover,
+.cp-dialog-close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}

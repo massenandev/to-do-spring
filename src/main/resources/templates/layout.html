@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+	<head>
+		<title>To Do Application</title>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<meta name="description" content="" />
+		<meta name="author" content="" />
+<!-- 		<link rel="icon" th:href="@{/image/favicon.png}" /> -->
+	
+		<!-- Bootstrap core CSS -->
+		<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+		<link th:href="@{/css/header.css}" rel="stylesheet" />
+		<link th:href="@{/css/main.css}" rel="stylesheet" />
+		<link th:href="@{/css/dashboard.css}" rel="stylesheet" />
+		<link th:href="@{/css/components/link-dropdown.css}" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="app-background">
+			<div class="container">
+				<div th:replace="fragments/header"></div>
+				<div th:replace="fragments/menu"></div>
+				<div id="panelMessageID" style="margin-bottom:0px;"></div>
+				<div layout:fragment="body"></div>
+				<div th:replace="fragments/footer"></div>
+				
+				<!-- Bootstrap core JavaScript
+			    ================================================== -->
+				<!-- Placed at the end of the document so the pages load faster -->
+				<script th:src="@{/js/popper.min.js}"></script>
+				<script th:src="@{/js/jquery-3.3.1.min.js}"></script>
+				<script th:src="@{/js/bootstrap.min.js}"></script>
+				<script th:src="@{/js/jquery.mask.min.js}"></script>
+				<script th:src="@{/js/feather.min.js}"></script>
+				<script th:src="@{/js/components/commons.js}"></script>
+				<script th:src="@{/js/components/cp-mask.js}"></script>
+				<script th:src="@{/js/components/cp-messages.js}"></script>
+			</div>
+		</div>
+	</body>
+	<script>
+		feather.replace()
+	</script>
+</html>

@@ -32,7 +32,7 @@ public class TaskController {
 		return ResponseEntity.ok().body(TaskDto.parse(service.findById(id).get()));
 	}
 
-	@PostMapping(value = "/create", consumes = MediaType.APPLICATION_JSON_VALUE)
+	@PostMapping(value = "/new", consumes = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<?> create(@RequestBody TaskDto taskDto) {
 
 		try {
@@ -48,10 +48,20 @@ public class TaskController {
 
 		try {
 			service.update(TaskDto.parse(taskDto));
-			return ResponseEntity.ok("Task atualizada com sucesso!");
+			return ResponseEntity.ok("Task updated successfully!");
 		} catch (Exception ex) {
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
-
+	
+	@PutMapping(value = "/status/{status}/id/{id}")
+	public ResponseEntity<?> setStatus(@PathVariable boolean status, @PathVariable Long id){
+		
+		try {
+			service.updateStatus(id, status);
+			return ResponseEntity.ok().body(TaskDto.parse(service.findAll()));
+		} catch (Exception ex) {
+			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+	}
 }

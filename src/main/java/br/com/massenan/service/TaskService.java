@@ -38,5 +38,9 @@ public class TaskService {
 	public void update(Task task) {
 		repository.saveAndFlush(task);
 	}
+	
+	public void updateStatus(Long id, boolean active) {
+		repository.updateStatus(active, id);
+	}
 
 }
