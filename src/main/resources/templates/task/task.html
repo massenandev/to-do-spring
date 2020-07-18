@@ -1,55 +1,62 @@
 <!DOCTYPE html>
 <html layout:decorate="~{layout}">
-	<head><meta charset="UTF-8" /></head>
+	<head>
+		<meta charset="UTF-8"/>
+		<link th:href="@{/css/components/cp-confirm-dialog.css}" rel="stylesheet"/>
+		<link th:href="@{/css/components/cp-modal.css}" rel="stylesheet"/>
+	</head>
 	<body>
 		<div layout:fragment="body">	
 			<div class="container app-body">
-				<div>
-					<div id="messageID"></div>
+				<div class="container app-body">
 					<ul class="nav justify-content-end">
 					  <li class="nav-item">
-						<a class="nav-link" href="#" id="btnOpenModalID">
+						<a class="nav-link" href="#" id="btnAbrirModalID">
 							<span class="feather-action-button" data-feather="plus-square"></span>
 							New
 						</a>
 					  </li>
 					</ul>
+					<!-- TASKS TABLE -->
+					<table class="table app-table" id="tblTasksID">
+					  <thead>
+					    <tr>
+					      <th scope="col">Name</th>
+					      <th scope="col">Created</th>
+					      <th scope="col">Last update</th>
+					      <th scope="col">Active</th>
+					    </tr>
+					  </thead>
+					  <tbody>
+					  </tbody>
+					</table>
 				</div>
-				<!-- TASKS TABLE -->
-				<table class="table" id="tblTasksID">
-				  <thead>
-				    <tr>
-				      <th scope="col">Name</th>
-				      <th scope="col">Created</th>
-				      <th scope="col">Last updated</th>
-				      <th scope="col">Active</th>
-				    </tr>
-				  </thead>
-				  <tbody>
-				  </tbody>
-				</table>
-				
-				<!-- NEW TASK MODAL -->
-<!-- 				<div id="modalNewID" class="cp-modal"> -->
-<!-- 					<div class="cp-modal-content"> -->
-<!-- 						<div class="cp-modal-title"> -->
-<!-- 							<span>Insert new task</span><span class="cp-modal-close">x</span> -->
-<!-- 						</div> -->
-<!-- 						<div id="msgNewTask"></div> -->
-<!-- 						<div class="cp-modal-body"> -->
-<!-- 							<div class="form-row"> -->
-<!-- 				    			<div class="form-group col-md-6"> -->
-<!-- 								     <label for="nameID">What's your task for today?</label> -->
-<!-- 								  	 <input type="text" class="form-control form-control-sm" id="nameID" maxlength="100"> -->
-<!-- 								</div> -->
-<!-- 							</div> -->
-<!-- 			    			<button id="newTaskID" type="submit" class="btn btn-primary btn-sm">Create</button> -->
-<!-- 					  		<button id="cancelTaskID" type="button" class="btn btn-secondary btn-sm">Cancel</button> -->
-<!-- 						</div> -->
+					
+				<!-- MODAL TO INSERT TASKS -->
+				<div id="modalInsertTaskID" class="cp-modal">
+					<div class="cp-modal-content">
+						<div class="cp-modal-title">
+							<span>Cadastro de Cidade</span><span class="cp-modal-close">x</span>
+						</div>
+						<div class="cp-modal-body">
+							 <div id="msgCadCidade"></div>
+							  <div class="form-group">
+							  	 <input type="hidden" id="hiddenID"/>
+							     <label for="usernameID">Name</label>
+							  	 <input type="text" class="form-control form-control-sm" id="cidadeID" maxlength="100">
+							 </div>
+							 <hr class="my-3">
+						 	 <div style="text-align:right;">
+				    			 <button id="insertTaskID" type="submit" class="btn btn-primary btn-sm">Insert</button>
+						  		 <button id="cancelaTaskID" type="button" class="btn btn-secondary btn-sm">Cancel</button>
+						 	 </div>
+						</div>
 				   </div>
 				</div>
 			</div>
 		</div>
 	</body>
 </html>
+<script th:src="@{/js/components/cp-confirm-dialog.js}"></script>
+<script th:src="@{/js/components/cp-modal.js}"></script>
 <script th:src="@{/js/domain/task.js}"></script>
