@@ -36,20 +36,59 @@
 				<div id="modalInsertTaskID" class="cp-modal">
 					<div class="cp-modal-content">
 						<div class="cp-modal-title">
-							<span>Cadastro de Cidade</span><span class="cp-modal-close">x</span>
+							<span>What do you need to do?</span><span class="cp-modal-close">x</span>
 						</div>
 						<div class="cp-modal-body">
-							 <div id="msgCadCidade"></div>
+							 <div id="msgInsertTask"></div>
 							  <div class="form-group">
 							  	 <input type="hidden" id="hiddenID"/>
-							     <label for="usernameID">Name</label>
+							     <label for="nameID"></label>
 							  	 <input type="text" class="form-control form-control-sm" id="cidadeID" maxlength="100">
 							 </div>
 							 <hr class="my-3">
 						 	 <div style="text-align:right;">
 				    			 <button id="insertTaskID" type="submit" class="btn btn-primary btn-sm">Insert</button>
-						  		 <button id="cancelaTaskID" type="button" class="btn btn-secondary btn-sm">Cancel</button>
+						  		 <button id="cancelTaskID" type="button" class="btn btn-secondary btn-sm">Cancel</button>
 						 	 </div>
+						</div>
+				   </div>
+				</div>
+				
+				<!-- MODAL TO UPDATE A TASK -->
+				<div id="modalUpdateTaskID" class="cp-modal">
+					<div class="cp-modal-content">
+						<div class="cp-modal-title">
+							<span>Update task</span><span class="cp-modal-close">x</span>
+						</div>
+						<div class="cp-modal-body">
+							 <div id="msgUpdateUsuario"></div>
+							  <div class="form-group">
+							  	  <label for="perfilAtlzrID"></label>
+							 </div>
+							 <hr class="my-3">
+						 	 <div style="text-align:right;">
+				    			 <button id="updateTaskID" type="submit" class="btn btn-primary btn-sm">Update</button>
+						  		 <button id="cancelUpdateTaskID" type="button" class="btn btn-secondary btn-sm">Cancel</button>
+						 	 </div>
+						</div>
+				   </div>
+				</div>
+				
+				<!-- DIALOG TO UPDATE THE TASK STATUS-->
+				<div id="dialogStatusID" class="cp-confirm-dialog">
+					<div class="cp-confirm-dialog-content">
+						<div class="cp-confirm-dialog-title">
+							<span>Activate/Deactivate Task</span><span class="cp-confirm-dialog-close">x</span>
+						</div>
+						<div class="cp-confirm-dialog-body">
+						  	<label id="questionID"></label>
+							<div style="padding:10px 0px 0px 0px;">
+						  		<hr class="my-3">
+							 	<div style="text-align:right;">
+							  		<button id="confirmActiveID" type="submit" class="btn btn-primary btn-sm">Confirm</button>
+							  		<button id="closeAtivoID" type="button" class="btn btn-secondary btn-sm">Cancel</button>
+								</div>
+							</div>
 						</div>
 				   </div>
 				</div>
