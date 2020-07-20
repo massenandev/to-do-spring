@@ -8,7 +8,6 @@ In this web application, you can manage your tasks
 - Spring JPA
 - PostgreSQL
 - Maven
-- JUnit
 - jQuery
 - Bootstrap
 
