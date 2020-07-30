@@ -18,7 +18,7 @@ public class Task {
 	@Column(name = "Name", nullable = false)
 	private String name;
 
-	@Column(name = "Create_Date", nullable = false)
+	@Column(name = "Create_Date")
 	private LocalDateTime createDate;
 
 	@Column(name = "Update_Date")

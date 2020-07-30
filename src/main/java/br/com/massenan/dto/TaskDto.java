@@ -24,7 +24,7 @@ public class TaskDto {
 		Task task = new Task();
 		task.setId(dto.getId());
 		task.setName(dto.getName());
-		task.setCreateDate(dto.getCreateDate());
+		task.setCreateDate(LocalDateTime.now());
 		task.setUpdateDate(dto.getUpdateDate());
 		task.setActive(dto.isActive());
 		return task;
@@ -34,7 +34,7 @@ public class TaskDto {
 		TaskDto dto = new TaskDto();
 		dto.setId(task.getId());
 		dto.setName(task.getName());
-		dto.setCreateDate(task.getCreateDate());
+		dto.setCreateDate(LocalDateTime.now());
 		dto.setUpdateDate(task.getUpdateDate());
 		task.setActive(task.isActive());
 		return dto;
